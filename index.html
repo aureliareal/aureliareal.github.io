@@ -1310,6 +1310,48 @@
             background: #281e29;
 
         }
+
+
+        #88x31scroll {
+            display: flex;
+            gap: 8px;
+            width: 80%;
+            max-width: 600px;
+            height: 47px;
+            overflow: hidden;
+            padding: 8px;
+            background: rgba(255, 240, 165, .1);
+            border-radius: 12px;
+            border: 1px solid var(--tape);
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        #88x31scroll {
+            animation: autoScroll 30s linear infinite;
+        }
+
+        @keyframes autoScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        #88x31scroll a {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #88x31scroll img {
+            display: block;
+            height: 31px;
+            width: 88px;
+        }
     </style>
 </head>
 
@@ -1542,7 +1584,7 @@
 
                     </p>
 
-                    <a href="https://e31d.prosurestrng.xyz">
+                    <a href="https://e31d.prosurestring.xyz">
                         <p id="rainbowtargettest">
 
                             new! try 'e3 1d devenv' on lowend devices!
@@ -2430,7 +2472,7 @@
                     </p>
 
 
-                    <div>
+                    <div id="88x31scroll">
 
                         <a class="badge-nobg" href="https://prosurestring.xyz">
                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAYAAABjyArgAAAAAXNSR0IArs4c6QAAAaRJREFUaEPtmk1ShDAQheGsWi60vEM4g6ULnfGerGI1VjTTk6SfLREoHxsGptM/Xx5NoBhjjHHg1oXANE3DSMBd2A4CN4TwDfjt/N4n0j/1end7s1T+pWACXlcJBLwuzytvBEzAnQl0dg8rWAxfT+clndpvJNcUMPnS/krHud80Xs7VfOj80vg8f30uxW35tXIr1f+ngCXY0/PLksfjw/3FhKXCShOgAQuoeZ6vfJQEUIOST0KysXLrDjgvtFZMS8W5+nKlpGL1vqWIkip/C7h1hSK57ULBSJvR6tpawbq15K3JaourtwgEjtXHLR+l/lnroWiL2LwHWzPl6U+Iz6PbwAo+eqFb5U/Ancm7ANfWougKAr1J7DkOOi8w4NqNx7ohlWAedQwKVa965PjHb9OsB4LWmhBVcGtlgFwtveMgwKlgRal1dSFAtQ0MuCT7/GnMCr7nfurJzao3/e8CjDqn3eeLMVcPJjyMAAFjnNxWBOxGhw0kYIyT24qA3eiwgQSMcXJbEbAbHTaQgDFObqsLwPINlXxLxW19AmMIIQpgbn0IfAC2kDOf61++7AAAAABJRU5ErkJggg=="
@@ -2438,8 +2480,30 @@
                         </a>
 
 
+                        <a class="badge-nobg" title="Powered by Coffee">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAYAAABjyArgAAAAAXNSR0IArs4c6QAAAWtJREFUaEPtmEFuwjAMht8QJy4TWNiwcZrGxakbJ05wAk7AgXEBDsBpehx2nBhYOHGBiYkrUiWMuASFdkiMxcn2mKR/iUvn/8/v/8mSl9sD+4EFXVS4Wq08Go2+giiKXLPZVLPZTBWLRWUYhlgsFlwul1Sv19Mr6XRaWZalLMvSRqOhRqORGo/HqtvtKsdxVLvdVgDkwB4R2Yw7QhzHyLJsXzPVarWu/7H9fg8ACKyWrwhxHCM+n+9aNZ9Op5Xlpuu6uu4TyeVyRfFbFSPu7+9VJpN544TBbDbT1WqF2+2GbrdLs9kMi8UC0+kUk8kEk8kEq9UKq9UK0+kUbDaDMQaqqmI2m8FqtQIAt90VCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUDwd7KZq1z2JFp1yZNolSVPolWXPIlWXfIkWnXJk2jVJU+iVZc8iVZd8iRa9cmTaNU5T6JV5zyJVp3zJFp1yZNo1SVPolWXPIlWXfIkWnXJk2jVJU+iVZc8iVZd8iRa9cmTaNU5T6JV5zyJVp3zJFp1yZNo1SVPolWXPIlW/QHfE5dBJkZhxgAAACV0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII="
+                                alt="Powered by Coffee" height="31" width="88">
+                        </a>
 
-                        <a class="badge-nobg">
+                        <a class="badge-nobg" title="This Page is Under Construction">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAYAAABjyArgAAAAAXNSR0IArs4c6QAAAXpJREFUaEPtmLFuwjAcxo8IVBWqFiqoKJ4gd2BgY2JiYmBhYmRgQGJgQEICLxMSEhMTIzMCExMLExMrExsSExICExMrGxMLGxpUhMTX3hGXzMkCZ1r2pM/h+/+/7v7PsYkQQki/309ZlnEcRwghpGkaJ0nCsWxG0zSfz8/f34GYpukzjmO93u8ZY4xpmhRF0TTNTLdbWSwWVKfTIZqmUa1WS1EURXmep6rVKoXD4T+R0jRNz+dzgGEY5HK5/qQpiqJomoYQQnK5HEHf98n3/b+SOZ/Px3dj12FUq1VyuVzE5/MRKYqilsvlRbJerzEZDJRhGORwOAhN01QymaTBYEBKpRJ9vV4pjuNTELdajUZFqVRSHo/nItjz9zEh5NvVDR4ej4ekaVqvxr9z0ul0stfXV75aIxLOt0gUDAb5YrHQo9HI5vN5frI1UfF43P9ubI0P1Ol0lG3bdLlc9rQ0hBByu9309/dHsiyz1+sVPR4PW6vVdLlcJq/XS71eT5IkiSaTyWpOIRAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBIK/4DdcE5dBJkZhxgAAACV0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII="
+                                alt="This Page is Under Construction" height="31" width="88">
+                        </a>
+
+
+                        <a class="badge-nobg" title="Best with any OS">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAYAAABjyArgAAAAAXNSR0IArs4c6QAAAXtJREFUaEPtmLFuwjAcxo8IVBWqFiqoKJ4gd2BgY2JiYmBhYmRgQGJgQEICLxMSEhMTIzMCExMLExMrExsSExICExMrGxMLGxpUhMTX3hGXzMkCZ1r2pM/h+/+/7v7PsYkQQki/309ZlnEcRwghpGkaJ0nCsWxG0zSfz8/f34GYpukzjmO93u8ZY4xpmhRF0TTNTLdbWSwWVKfTIZqmUa1WS1EURXmep6rVKoXD4T+R0jRNz+dzgGEY5HK5/qQpiqJomoYQQnK5HEHf98n3/b+SOZ/Px3dj12FUq1VyuVzE5/MRKYqilsvlRbJerzEZDJRhGORwOAhN01QymaTBYEBKpRJ9vV4pjuNTELdajUZFqVRSHo/nItjz9zEh5NvVDR4ej4ekaVqvxr9z0ul0stfXV75aIxLOt0gUDAb5YrHQo9HI5vN5frI1UfF43P9ubI0P1Ol0lG3bdLlc9rQ0hBByu9309/dHsiyz1+sVPR4PW6vVdLlcJq/XS71eT5IkiSaTyWpOIRAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBIK/4DdcE5dBJkZhxgAAACV0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII="
+                                alt="Best with any OS" height="31" width="88">
+                        </a>
+
+
+
+                        <a class="badge-nobg" href="https://prosurestring.xyz">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAYAAABjyArgAAAAAXNSR0IArs4c6QAAAaRJREFUaEPtmk1ShDAQheGsWi60vEM4g6ULnfGerGI1VjTTk6SfLREoHxsGptM/Xx5NoBhjjHHg1oXANE3DSMBd2A4CN4TwDfjt/N4n0j/1end7s1T+pWACXlcJBLwuzytvBEzAnQl0dg8rWAxfT+clndpvJNcUMPnS/krHud80Xs7VfOj80vg8f30uxW35tXIr1f+ngCXY0/PLksfjw/3FhKXCShOgAQuoeZ6vfJQEUIOST0KysXLrDjgvtFZMS8W5+nKlpGL1vqWIkip/C7h1hSK57ULBSJvR6tpawbq15K3JaourtwgEjtXHLR+l/lnroWiL2LwHWzPl6U+Iz6PbwAo+eqFb5U/Ancm7ANfWougKAr1J7DkOOi8w4NqNx7ohlWAedQwKVa965PjHb9OsB4LWmhBVcGtlgFwtveMgwKlgRal1dSFAtQ0MuCT7/GnMCr7nfurJzao3/e8CjDqn3eeLMVcPJjyMAAFjnNxWBOxGhw0kYIyT24qA3eiwgQSMcXJbEbAbHTaQgDFObqsLwPINlXxLxW19AmMIIQpgbn0IfAC2kDOf61++7AAAAABJRU5ErkJggg=="
+                                alt="prosurestring.xyz" height="31" width="88">
+                        </a>
+
+                        <a class="badge-nobg" title="Counter">
                             <script language="javascript" type="text/javascript"
                                 src="//counter1.fc2.com/counter.php?id=41089052&main=1"></script><noscript><img
                                     src="//counter1.fc2.com/counter_img.php?id=41089052&main=1" /></noscript>
