@@ -2414,57 +2414,59 @@
 
                 <style>
                     .logo-scroller-container {
-                        width: 309px;
-                        margin: 0 auto;
-                        overflow: hidden;
-                        display: flex;
-                        background: #111;
-                        padding: 10px 0;
-                        border: 2px solid #333;
-                    }
-
-                    .logo-scroller-track {
-                        display: flex;
-                        gap: 15px;
-                        animation: scroll-three-sets 15s linear infinite;
-                    }
-
-                    .logo-scroller-track img {
-                        width: 88px;
-                        height: 31px;
-                        flex-shrink: 0;
-                        object-fit: contain;
-                    }
-
-                    .logo-scroller-container:hover .logo-scroller-track {
-                        animation-play-state: paused;
-                    }
-
-                    @keyframes scroll-three-sets {
-                        0% {
-                        transform: translateX(0);
+                            --total-logos: 5; 
+                            
+                            width: 309px;
+                            margin: 0 auto;
+                            overflow: hidden;
+                            display: flex;
+                            background: transparent;
+                            padding: 10px 0;
+                            border: 2px solid #333;
                         }
-                        100% {
-                        transform: translateX(calc(-33.3333% - 5px));
+
+                        .logo-scroller-track {
+                            display: flex;
+                            gap: 15px;
+                            animation: scroll-dynamic calc(var(--total-logos) * 3s) linear infinite;
                         }
-                    }
+
+                        .logo-scroller-track img {
+                            width: 88px;
+                            height: 31px;
+                            flex-shrink: 0;
+                            object-fit: contain;
+                        }
+
+                        .logo-scroller-container:hover .logo-scroller-track {
+                            animation-play-state: paused;
+                        }
+
+                        @keyframes scroll-dynamic {
+                            0% {
+                                transform: translateX(0);
+                            }
+                            100% {
+                                transform: translateX(calc( (88px * var(--total-logos) + (15px * var(--total-logos))) * -1 ));
+                            }
+                        }
                     </style>
 
                     <div class="logo-scroller-container">
-                    <div class="logo-scroller-track">
-                        
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%23ff595e'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 1</text></svg>" width="88" height="31" alt="Logo 1">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%23ffca3a'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23000' font-family='sans-serif' font-size='12'>Btn 2</text></svg>" width="88" height="31" alt="Logo 2">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%238ac926'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 3</text></svg>" width="88" height="31" alt="Logo 3">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%231982c4'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 4</text></svg>" width="88" height="31" alt="Logo 4">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%236a4c93'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 5</text></svg>" width="88" height="31" alt="Logo 5">
-                        
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%23ff595e'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 1</text></svg>" width="88" height="31" alt="Logo 1" aria-hidden="true">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%23ffca3a'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23000' font-family='sans-serif' font-size='12'>Btn 2</text></svg>" width="88" height="31" alt="Logo 2" aria-hidden="true">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%238ac926'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 3</text></svg>" width="88" height="31" alt="Logo 3" aria-hidden="true">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%231982c4'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 4</text></svg>" width="88" height="31" alt="Logo 4" aria-hidden="true">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%236a4c93'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 5</text></svg>" width="88" height="31" alt="Logo 5" aria-hidden="true">
-                    </div>
+                        <div class="logo-scroller-track">
+                            
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%23ff595e'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 1</text></svg>" width="88" height="31" alt="Logo 1">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%23ffca3a'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23000' font-family='sans-serif' font-size='12'>Btn 2</text></svg>" width="88" height="31" alt="Logo 2">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%238ac926'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 3</text></svg>" width="88" height="31" alt="Logo 3">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%231982c4'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 4</text></svg>" width="88" height="31" alt="Logo 4">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%236a4c93'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 5</text></svg>" width="88" height="31" alt="Logo 5">
+                            
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%23ff595e'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 1</text></svg>" width="88" height="31" alt="Logo 1" aria-hidden="true">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%23ffca3a'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23000' font-family='sans-serif' font-size='12'>Btn 2</text></svg>" width="88" height="31" alt="Logo 2" aria-hidden="true">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%238ac926'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 3</text></svg>" width="88" height="31" alt="Logo 3" aria-hidden="true">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%231982c4'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 4</text></svg>" width="88" height="31" alt="Logo 4" aria-hidden="true">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='31'><rect width='100%' height='100%' fill='%236a4c93'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-size='12'>Btn 5</text></svg>" width="88" height="31" alt="Logo 5" aria-hidden="true">
+                        </div>
                     </div>
 
 
