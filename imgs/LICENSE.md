@@ -1,0 +1,1 @@
+Copyright (c) 2026 Nicki Aurelia. All Rights Reserved.
